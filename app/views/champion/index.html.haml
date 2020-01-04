@@ -1,0 +1,18 @@
+%h1 All Champions
+
+%table#champions
+  %head
+    %tr
+      %th Champion Name
+      %th Rarity
+      %th Attribute
+      %th More Info
+  %tbody
+    - @champions.each do |c|
+      %tr
+        %td= c.name
+        %td= c.rating
+        %td= c.description
+        %td= link_to "Details", champion_path(c)
+        
+= link_to 'Add new champion', new_champion_path

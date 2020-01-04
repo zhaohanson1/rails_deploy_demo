@@ -1,0 +1,14 @@
+%h2 Details about #{@champion.name}
+
+%ul#details
+	%li 
+		Rarity: 
+		= @champion.rating
+
+%h3 Attributes:
+%ul#attributes
+	%li 
+		= @champion.description
+
+= link_to "Go back", champion_index_path
+= link_to "Delete Champion", champion_path, :method => :delete
