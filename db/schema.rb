@@ -11,12 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200104052256) do
+ActiveRecord::Schema.define(version: 20200104101908) do
 
   create_table "champions", force: :cascade do |t|
     t.string "name"
     t.string "rating"
-    t.text   "description"
     t.string "corigin"
     t.string "cclass"
   end

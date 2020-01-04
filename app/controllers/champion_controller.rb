@@ -2,6 +2,11 @@ class ChampionController < ApplicationController
     
     def index
         @champions = Champion.all
+        respond_to do |client_wants|
+            client_wants.html {}
+            client_wants.xml { render :xml => @champions.to_xml}
+            client_wants.json { render :xml => @champions.to_json}
+        end
     end
     
     def new 
