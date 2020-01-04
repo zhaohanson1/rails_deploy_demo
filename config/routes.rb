@@ -55,4 +55,5 @@ Rails.application.routes.draw do
   #   end
   resources :champion
   root :to => redirect('/champion')
+  post '/champion/:id(:format)' => "champion#update"
 end

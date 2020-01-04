@@ -1,16 +1,5 @@
 %h2 Create New Champion
 
 = form_tag champion_index_path, :method => :post do
-	= label :champion, :name, "Name"
-	= text_field :champion, :name
-	
-	= label :champion, :rating, "Rarity"
-	= select :champion, :rating, ['1','2','3','4','5']
-	
-	= label :champion, :corigin, "Origin"
-	= text_field :champion, :corigin
-	
-	= label :champion, :cclass, "Class"
-	= text_field :champion, :cclass
-	
+	= render :partial => 'champion_form'
 	= submit_tag 'Save Changes'

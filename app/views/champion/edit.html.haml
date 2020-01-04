@@ -1,0 +1,5 @@
+%h2 Edit Champion
+
+= form_tag champion_path @champion[:id], :method => :put do
+	= render :partial => 'champion_form'
+	= submit_tag 'Save Changes'

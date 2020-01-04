@@ -8,6 +8,17 @@ class ChampionController < ApplicationController
         @champion = Champion.new
     end
     
+    def edit 
+        @champion = Champion.find params[:id]
+    end
+    
+    def update
+        @champion = Champion.find params[:id]
+        @champion.update_attributes!(champion_params)
+        flash[:notice] = "#{@champion.name} was sucessfully updated."
+        redirect_to champion_path @champion
+    end
+    
     def create
         @champion = Champion.create!(champion_params)
         flash[:notice] = "#{@champion.name} was sucessfully created."
@@ -15,17 +26,15 @@ class ChampionController < ApplicationController
     end
     
     def destroy
-        id = params[:id]
-        champion = Champion.find(id)
+        champion = Champion.find params[:id]
         cname = champion.name
-        champion.destroy
+        champion.destroy!
         flash[:notice] = "#{cname} was sucessfully destroyed."
         redirect_to champion_index_path
     end
     
     def show
-        id = params[:id]
-        @champion = Champion.find(id)
+        @champion = Champion.find params[:id]
     end
     
     private 
