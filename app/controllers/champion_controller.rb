@@ -30,6 +30,6 @@ class ChampionController < ApplicationController
     
     private 
     def champion_params
-        params.require(:champion).permit(:name, :rating, :description)
+        params.require(:champion).permit(:name, :rating, :corigin, :cclass)
     end
 end

@@ -5,14 +5,16 @@
     %tr
       %th Champion Name
       %th Rarity
-      %th Attribute
+      %th Origin
+      %th Class
       %th More Info
   %tbody
     - @champions.each do |c|
       %tr
         %td= c.name
         %td= c.rating
-        %td= c.description
+        %td= c.corigin
+        %td= c.cclass
         %td= link_to "Details", champion_path(c)
         
 = link_to 'Add new champion', new_champion_path

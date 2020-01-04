@@ -7,7 +7,10 @@
 	= label :champion, :rating, "Rarity"
 	= select :champion, :rating, ['1','2','3','4','5']
 	
-	= label :champion, :description, "Description"
-	= text_field :champion, :description
+	= label :champion, :corigin, "Origin"
+	= text_field :champion, :corigin
+	
+	= label :champion, :cclass, "Class"
+	= text_field :champion, :cclass
 	
 	= submit_tag 'Save Changes'

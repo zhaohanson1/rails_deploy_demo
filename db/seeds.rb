@@ -20,7 +20,12 @@ one_star_units = [
     {:name => 'Vayne', :description => 'Noble Ranger'},
     {:name => 'Warwick', :description => 'Wild Brawler'}
 ]
-
+one_star_units.each do |unit|
+    corigin, cclass = unit[:description].split
+    unit[:corigin] = corigin
+    unit[:cclass] = cclass
+    unit.delete(:description)
+end
 one_star_units.each do |t|
     t[:rating] = 1
     Champion.create!(t) 
