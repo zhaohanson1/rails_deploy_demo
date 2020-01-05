@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 ruby '2.4.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.10'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.3.13'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -38,7 +36,10 @@ gem 'figaro'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'jasmine-rails' # if you plan to use JavaScript/CoffeeScript
+  # if you plan to use JavaScript/CoffeeScript
+  gem 'jasmine-rails' 
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '~> 1.3.13'
 end
 
 group :development do
@@ -59,4 +60,8 @@ group :test do
   gem 'database_cleaner' # required by Cucumber
   gem 'factory_girl_rails' # if using FactoryGirl
   gem 'metric_fu'        # collect code metrics
+end
+
+group :production do
+  gem 'pg'
 end
