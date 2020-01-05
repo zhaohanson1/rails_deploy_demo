@@ -22,3 +22,28 @@ SaaS book:
   * Chapter 4: Introduction to Rails
   * Chapter 5: Advanced Rails
   * Chapter 8: Test-Driven Development
+
+CodeClimate: https://docs.codeclimate.com/
+
+Test Suites: 
+```
+rails generate rspec:install
+rails generate cucumber:install
+rails generate cucumber_rails_training_wheels:install
+rails generate jasmine_rails:install
+```
+
+Guard: http://saasbook.github.io/courseware/rspec/guard.html
+
+SimpleCov:
+```
+# at TOP of spec/rails_helper.rb:
+require 'simplecov'
+SimpleCov.start
+```
+
+Heroku: https://devcenter.heroku.com/articles/getting-started-with-ruby
+* Migration: ```heroku run rake db:migrate```
+* Seed: ```heroku run rake db:seed```
+
+TravisCI: http://saasbook.github.io/courseware/devops/travis-ci-setup.html
