@@ -1,0 +1,13 @@
+camille:
+ id: 1
+ name: "Camille"
+ rating: "1"
+ corigin: "Hextech"
+ cclass: "Blademaster"
+
+elise:
+ id: 2
+ name: "Elise"
+ rating: "1"
+ corigin: "Demon"
+ cclass: "Shapeshifter"
