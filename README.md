@@ -46,4 +46,8 @@ Heroku: https://devcenter.heroku.com/articles/getting-started-with-ruby
 * Migration: ```heroku run rake db:migrate```
 * Seed: ```heroku run rake db:seed```
 
+Figaro: 
+* http://saasbook.github.io/courseware/devops/storing-sensitive-data.html
+* https://github.com/laserlemon/figaro
+
 TravisCI: http://saasbook.github.io/courseware/devops/travis-ci-setup.html
