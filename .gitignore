@@ -21,3 +21,5 @@
 
 # Do not commit generated files in the coverage directory.
 coverage/*
+
+vendor/*
