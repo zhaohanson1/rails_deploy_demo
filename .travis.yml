@@ -33,14 +33,14 @@ script:
   # insert here any other steps needed (load other sample data, etc) before starting tests
   # run RSpec tests, and capture coverage
   - bundle exec rspec
-  - $CCTR format-coverage -t simplecov --output coverage/codeclimate.rspec.json
+  - $CCTR format-coverage -t simplecov --output coverage/codeclimate_rspec.json
   # run Cucumber scenarios, and capture coverage. --strict means undefined steps result in a failure.
   - bundle exec cucumber --strict
-  - $CCTR format-coverage -t simplecov --output coverage/codeclimate.ccb.json
+  - $CCTR format-coverage -t simplecov --output coverage/codeclimate_ccb.json
   
 after_script:
   # combine coverage from all suites, and upload to CodeClimate
-  - $CCTR sum-coverage coverage/codeclimate.*.json | $CCTR upload-coverage
+  - $CCTR sum-coverage coverage/codeclimate_*.json | $CCTR upload-coverage
   - $CCTR after-build --exit-code $TRAVIS_TEST_RESULT
   # just in case, be paranoid and remove sensitive config info file
   - rm -f config/application.yml
