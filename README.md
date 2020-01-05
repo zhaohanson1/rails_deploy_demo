@@ -12,3 +12,8 @@
 
 ## Build Status
 [![Build Status](https://travis-ci.com/zhaohanson1/rails_deploy_demo.svg?branch=master)](https://travis-ci.com/zhaohanson1/rails_deploy_demo)
+
+
+# Reproducing this repo
+
+Setting up AWS C9 environment: https://github.com/saasbook/courseware/wiki/Setting-up-Cloud9
