@@ -17,3 +17,8 @@
 # Reproducing this repo
 
 Setting up AWS C9 environment: https://github.com/saasbook/courseware/wiki/Setting-up-Cloud9
+
+SaaS book: 
+  * Chapter 4: Introduction to Rails
+  * Chapter 5: Advanced Rails
+  * Chapter 8: Test-Driven Development
