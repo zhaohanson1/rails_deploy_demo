@@ -40,6 +40,11 @@ group :development, :test do
   gem 'jasmine-rails' 
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.3.13'
+  # Guard support
+  gem 'guard'
+  gem 'guard-rspec', require: false
+  gem 'guard-cucumber'
+  gem 'guard-shell'
 end
 
 group :development do
@@ -50,10 +55,9 @@ group :development do
   gem 'spring'
 end
 
-# setup Cucumber, RSpec, Guard support
+# setup Cucumber, RSpec
 group :test do
   gem 'rspec-rails'
-  gem 'guard-rspec'
   gem 'simplecov', :require => false
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels' # basic imperative step defs
