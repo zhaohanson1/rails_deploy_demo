@@ -1,3 +1,6 @@
+# Rails Demo
+Setting up a basic RESTful API with MVC structure in Rails and testing metrics and deploying on Heroku.
+
 # CodeClimate
 
 #### Maintainability
