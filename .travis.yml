@@ -10,7 +10,7 @@ bundler_args:  --without production
 env:
   global:
     # in TravisCI settings, set CCKEY to your CodeClimate Test Reporter ID:
-    - CC_TEST_REPORTER_ID=$46feac79c6570ed4192998d56ed2167a7e9f03655e7ef4bb3608e76ddab62a64
+    - CC_TEST_REPORTER_ID=46feac79c6570ed4192998d56ed2167a7e9f03655e7ef4bb3608e76ddab62a64
     - CCTR=./cc-test-reporter
     # set to whatever timezone your app assumes from this list:
     # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -30,6 +30,8 @@ before_script:
 script:
   # setup the test database, including any seed data
   - bundle exec rake db:setup
+  - bundle exec rake db:migrate
+  - bundle exec rake db:seed
   # insert here any other steps needed (load other sample data, etc) before starting tests
   # run RSpec tests, and capture coverage
   - bundle exec rspec
