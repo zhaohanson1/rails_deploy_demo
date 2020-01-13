@@ -1,6 +1,7 @@
 # Rails Demo
 Setting up a basic RESTful API with MVC structure in Rails and testing metrics and deploying on Heroku.
-
+##### Website
+https://floating-bastion-88746.herokuapp.com/
 # CodeClimate
 
 #### Maintainability
